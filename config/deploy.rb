@@ -18,7 +18,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "sudo /usr/local/bin/bootup_bluepill phone restart"
+    #run "sudo /usr/local/bin/bootup_bluepill phone restart"
   end
 
   after "deploy", "deploy:cleanup"
