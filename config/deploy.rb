@@ -4,7 +4,7 @@ set :branch,     "release"
 set :scm, :git
 set :git_shallow_clone, 1
 
-role :app, "sip.baraspara.se"
+role :app, "10.0.6.15"
 
 set :user,              "adhearsion"
 set :deploy_to,         "/home/adhearsion/apps/phone"

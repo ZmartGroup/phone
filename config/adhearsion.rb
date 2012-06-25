@@ -30,11 +30,11 @@ Adhearsion.config do |config|
   ##
   # Use with Asterisk
   #
-  # config.punchblock.platform = :asterisk # Use Asterisk
-  # config.punchblock.username = "" # Your AMI username
-  # config.punchblock.password = "" # Your AMI password
-  # config.punchblock.host = "127.0.0.1" # Your AMI host
-  # config.punchblock.port = 5038 # Your AMI port
+  config.punchblock.platform = :asterisk # Use Asterisk
+  config.punchblock.username = ENV['AST_USER'] # Your AMI username
+  config.punchblock.password = ENV['AST_PASS'] # Your AMI password
+  config.punchblock.host     = "127.0.0.1" # Your AMI host
+  config.punchblock.port     = 5038 # Your AMI port
 end
 
 Adhearsion::Events.draw do
