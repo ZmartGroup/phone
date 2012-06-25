@@ -8,3 +8,9 @@ gem 'adhearsion-asterisk'
 # gem 'adhearsion-ldap'
 # gem 'adhearsion-xmpp'
 # gem 'adhearsion-drb'
+
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+end
