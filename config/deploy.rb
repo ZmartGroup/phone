@@ -1,3 +1,6 @@
+require "rvm/capistrano"
+require 'bundler/capistrano'
+
 set :repository, "git@github.com:ZmartGroup/phone.git"
 set :branch,     "release"
 

@@ -13,4 +13,6 @@ gem 'adhearsion-asterisk'
 group :development, :test do
   gem 'capistrano'
   gem 'capistrano-ext'
+
+  gem 'rvm-capistrano'
 end

@@ -99,6 +99,8 @@ GEM
     ruby_speech (1.0.0)
       activesupport (>= 3.0.7)
       niceogiri (~> 1.0)
+    rvm-capistrano (1.0.2)
+      capistrano (>= 2.0.0)
     slop (2.4.4)
     state_machine (1.1.2)
     systemu (2.5.1)
@@ -115,3 +117,4 @@ DEPENDENCIES
   adhearsion-asterisk
   capistrano
   capistrano-ext
+  rvm-capistrano
