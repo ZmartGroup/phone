@@ -1,8 +1,8 @@
 source :rubygems
 
-gem "adhearsion", "~> 2.0.1"
+gem 'adhearsion', :github => 'adhearsion/adhearsion' 
 
-gem 'adhearsion-asterisk'
+gem 'adhearsion-asterisk', :github => 'adhearsion/adhearsion-asterisk'
 # gem 'adhearsion-rails'
 # gem 'adhearsion-activerecord'
 # gem 'adhearsion-ldap'
