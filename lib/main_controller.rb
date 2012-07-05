@@ -9,8 +9,8 @@ class MainController < Adhearsion::CallController
 
   def top_ivr_menu
     menu "helloandwelcome", :timeout => 8.seconds, :tries => 3 do
-      match 1, ElController
-      match 2, InsController
+      match 1, ElQueueController
+      match 2, InsQueueController
 
       timeout {}
       invalid {}
