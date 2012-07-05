@@ -1,6 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activemodel (3.2.6)
+      activesupport (= 3.2.6)
+      builder (~> 3.0.0)
+    activerecord (3.2.6)
+      activemodel (= 3.2.6)
+      activesupport (= 3.2.6)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
     activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
@@ -22,16 +30,21 @@ GEM
       ruby_speech (~> 1.0)
       thor
       uuid
+    adhearsion-activerecord (0.1.0)
+      activerecord
+      adhearsion (>= 2.0.0.alpha1)
     adhearsion-asterisk (1.2.1)
       activesupport (>= 3.0.10)
       adhearsion (~> 2.0)
     adhearsion-loquacious (1.9.3)
+    arel (3.0.2)
     blather (0.7.1)
       activesupport (>= 3.0.7)
       eventmachine (>= 0.12.6)
       girl_friday
       niceogiri (~> 1.0)
       nokogiri (~> 1.4)
+    builder (3.0.0)
     capistrano (2.9.0)
       highline
       net-scp (>= 1.0.0)
@@ -105,6 +118,7 @@ GEM
     state_machine (1.1.2)
     systemu (2.5.1)
     thor (0.15.3)
+    tzinfo (0.3.33)
     uuid (2.3.5)
       macaddr (~> 1.0)
     uuidtools (2.1.2)
@@ -114,6 +128,7 @@ PLATFORMS
 
 DEPENDENCIES
   adhearsion (~> 2.0.1)
+  adhearsion-activerecord
   adhearsion-asterisk
   capistrano
   capistrano-ext
