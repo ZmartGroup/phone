@@ -1,0 +1,3 @@
+#!/bin/bash
+
+faad -q -w "$1" | lame -S -b 128 - -
