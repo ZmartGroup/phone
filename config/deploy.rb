@@ -18,6 +18,8 @@ set :keep_releases, 5
 
 set :asterisk_sound_dir, "/usr/local/asterisk/var/lib/asterisk/sounds"
 
+set :bluepill, "/usr/local/sbin/bluepill"
+
 default_run_options[:pty] = true
 set :use_sudo, false
 
@@ -25,7 +27,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    #run "sudo /usr/local/bin/bootup_bluepill phone restart"
+    run "sudo #{bluepill} adhearsion restart"
   end
 
   task :symlink_sound_files do
