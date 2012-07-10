@@ -27,7 +27,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "sudo #{bluepill} adhearsion restart"
+    #run "sudo #{bluepill} adhearsion restart"
   end
 
   task :symlink_sound_files do
