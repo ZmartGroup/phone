@@ -29,7 +29,7 @@ namespace :deploy do
   end
 
   task :symlink_sound_files do
-    run "rake symlink_sound_files[#{current_dir}/res/sounds,#{asterisk_sound_dir}]"
+    run "cd #{current_path}; rake symlink_sound_files[#{current_path}/res/sounds,#{asterisk_sound_dir}]"
   end
 
   after 'deploy', 'deploy:symlink_sound_files'
