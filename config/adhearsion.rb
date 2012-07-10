@@ -35,6 +35,17 @@ Adhearsion.config do |config|
   config.punchblock.password = ENV['AST_PASS'] || "bar" # Your AMI password
   config.punchblock.host     = "127.0.0.1" # Your AMI host
   config.punchblock.port     = 5038 # Your AMI port
+
+
+  config.adhearsion_activerecord do |config|
+    config.username = ENV['MYSQL_USER'] || "foo"
+    config.password = ENV['MYSQL_PASS'] || "bar"
+    config.database = ENV['MYSQL_DB']   || "adhearsion"
+    config.host     = ENV['MYSQL_HOST'] || "localhost"
+    config.port     = ENV['MYSQL_PORT'] || "3060"
+
+    config.adapter  = "mysql2"
+  end
 end
 
 Adhearsion::Events.draw do
