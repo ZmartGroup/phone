@@ -1,7 +1,7 @@
 require "rvm/capistrano"
 require 'bundler/capistrano'
 
-set :rvm_type, :user
+set :rvm_type, :system
 
 set :repository, "git@github.com:ZmartGroup/phone.git"
 set :branch,     "release"
@@ -16,6 +16,8 @@ set :deploy_to,         "/home/adhearsion/apps/phone"
 
 set :keep_releases, 5
 
+set :asterisk_sound_dir, "/usr/local/asterisk/var/lib/asterisk/sounds"
+
 default_run_options[:pty] = true
 set :use_sudo, false
 
@@ -26,5 +28,10 @@ namespace :deploy do
     #run "sudo /usr/local/bin/bootup_bluepill phone restart"
   end
 
-  after "deploy", "deploy:cleanup"
+  task :symlink_sound_files do
+    run "rake symlink_sound_files[#{current_dir}/res/sounds,#{asterisk_sound_dir}]"
+  end
+
+  after 'deploy', 'deploy:symlink_sound_files'
+  after 'deploy', 'deploy:cleanup'
 end
