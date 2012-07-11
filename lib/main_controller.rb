@@ -12,9 +12,9 @@ class MainController < Adhearsion::CallController
       match 1, ElQueueController
       match 2, InsQueueController
 
-      timeout {}
-      invalid {}
-      failure {}
+      timeout { NoChoiceController }
+      invalid { play "invalid_choice" }
+      failure { hangup }
     end
   end
 end
