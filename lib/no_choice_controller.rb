@@ -4,7 +4,7 @@ require_relative 'top_queue_controller'
 
 class NoChoiceController < TopQueueController
   def queue
-    @queue ||= super('nochoice')
+    super('nochoice')
   end
 
   def join_message

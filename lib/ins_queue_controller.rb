@@ -4,7 +4,7 @@ require_relative 'top_queue_controller'
 
 class InsQueueController < TopQueueController
   def queue
-    @queue ||= super('ins')
+    super('ins')
   end
 
   def join_message
