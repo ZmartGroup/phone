@@ -6,4 +6,8 @@ class ElQueueController < TopQueueController
   def queue
     @queue ||= super('el')
   end
+
+  def join_message
+    "will_be_connected_to_el"
+  end
 end

@@ -6,4 +6,8 @@ class InsQueueController < TopQueueController
   def queue
     @queue ||= super('ins')
   end
+
+  def join_message
+    "will_be_connected_to_ins"
+  end
 end

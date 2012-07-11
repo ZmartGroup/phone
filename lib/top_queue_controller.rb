@@ -10,7 +10,17 @@ class TopQueueController < Adhearsion::CallController
     20
   end
 
+  def queue
+    raise "Not implemented!"
+  end
+
+  def join_message
+    raise "Not implemented!"
+  end
+
   def join_or_pass
+    play join_message
+
     if queue.waiting_count <= max_waiting_count
       queue.join! :allow_transfer => :agent
     else
