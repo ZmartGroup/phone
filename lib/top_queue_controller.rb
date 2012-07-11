@@ -11,10 +11,13 @@ class TopQueueController < Adhearsion::CallController
   end
 
   def join_or_pass
+    enable_feature :attended_transfer
+    enable_feature :blind_transfer
+
     play join_message if join_message
 
     if queue.waiting_count <= max_waiting_count
-      queue.join! :allow_transfer => :agent
+      queue.join! :allow_transfer => :everyone
     else
       pass CallbackController
     end
